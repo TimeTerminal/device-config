@@ -2,6 +2,7 @@
 
 ## Mac
 1. Move these files to their appropriate folders
+
 {user folder}
   - .bash_profile
   - .git-completion.bash

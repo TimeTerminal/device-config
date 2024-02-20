@@ -1,4 +1,13 @@
 #  ------------------------------------------------------------
+#  Sources
+#  ------------------------------------------------------------
+source /Users/vishesh/workspace/scripts/main.sh
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+#  ------------------------------------------------------------
 #  Exports
 #  ------------------------------------------------------------
 #  Suppress zsh verbose message starting with macOS Catalina
@@ -8,7 +17,7 @@ export BLOCKSIZE=1k
 
 #  Format terminal prompt
 #  Set current tab name to the working directory
-export PS1="\e[32m\]\u\[\e[m\]:\[\e[33m\]\w$\e[m"
+export PS1="\e[32m\u\[\e[m\] \e[30m\]\w$\e[m"
 # Original: [\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h\[\e[m\]:\w]$
 #  \u               >> Current username
 #  []               >> []
@@ -34,19 +43,9 @@ export PATH="$PATH:/usr/local/bin/"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 #  ------------------------------------------------------------
-#  Sources
-#  ------------------------------------------------------------
-source /Users/vishesh/workspace/scripts/main.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-#  ------------------------------------------------------------
 #  Aliases
 #  ------------------------------------------------------------
 alias f='open -a Finder ./'  # Opens current directory in MacOS Finder
 alias ls='ls -la' # Change ls to ls -la
-
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
 
 cd /Users/vishesh/workspace/
