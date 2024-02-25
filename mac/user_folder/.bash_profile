@@ -17,7 +17,7 @@ export BLOCKSIZE=1k
 
 #  Format terminal prompt
 #  Set current tab name to the working directory
-export PS1="\e[32m\u\[\e[m\] \e[30m\]\w$\e[m"
+export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h \[\e[30m\]\w$\[\e[m"
 # Original: [\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h\[\e[m\]:\w]$
 #  \u               >> Current username
 #  []               >> []
@@ -32,6 +32,8 @@ export PS1="\e[32m\u\[\e[m\] \e[30m\]\w$\e[m"
 
 #  Set Default Editor
 export EDITOR=/usr/bin/nano
+
+export NPM_TOKEN=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
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
