@@ -1,22 +1,22 @@
-#  ------------------------------------------------------------
-#  Sources
-#  ------------------------------------------------------------
+# ===============
+# === Sources ===
+# ===============
 source /Users/vishesh/workspace/scripts/main.sh
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-#  ------------------------------------------------------------
-#  Exports
-#  ------------------------------------------------------------
+# ===============
+# === Exports ===
+# ===============
 #  Suppress zsh verbose message starting with macOS Catalina
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export BLOCKSIZE=1k
 
-#  Format terminal prompt
-#  Set current tab name to the working directory
+# Format terminal prompt
+# Set current tab name to the working directory
 export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h \[\e[30m\]\w$\[\e[m"
 # Original: [\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h\[\e[m\]:\w]$
 #  \u               >> Current username
@@ -30,10 +30,8 @@ export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h \[\e[30m\]\w$\[\e[m"
 #
 # \[\033]0;\w\007\] >> Sets the current tab title to ~, then wherever you navigate to
 
-#  Set Default Editor
+# Set Default Editor
 export EDITOR=/usr/bin/nano
-
-export NPM_TOKEN=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
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -41,12 +39,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set Path
 export PATH="$PATH:/usr/local/bin/"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin" # Add Homebrew to PATH
+export PATH="$(brew --prefix)/opt/python@3.12/libexec/bin:$PATH" # Set Homebrew's installed Python3.12 to PATH
+# Add RVM to PATH for scripting. **Make sure this is the last PATH** variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-#  ------------------------------------------------------------
-#  Aliases
-#  ------------------------------------------------------------
+# ===============
+# === Aliases ===
+# ===============
 alias f='open -a Finder ./'  # Opens current directory in MacOS Finder
 alias ls='ls -la' # Change ls to ls -la
 
